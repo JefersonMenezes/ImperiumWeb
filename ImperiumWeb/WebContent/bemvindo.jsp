@@ -17,13 +17,15 @@
 				<h1>Imperium Login</h1>
 			</div>
 			<div class="form">
-				<ul class="unorder-list">
-					<li><label>Usuário</label></li>
-					<li><input type="text" name=""></li>
-					<li><label>Senha</label></li>
-					<li><input type="password" name=""></li><br>
-					<li><input type="submit" value="Logar" class="button" /></li>
-				</ul>
+				<form action="">
+					<ul class="unorder-list">
+						<li><label>Usuário</label></li>
+						<li><input type="text" name=""></li>
+						<li><label>Senha</label></li>
+						<li><input type="password" name=""></li><br>
+						<li><input type="submit" value="Logar" class="button" /></li>
+					</ul>
+				</form>
 			</div>
 		</div>
 

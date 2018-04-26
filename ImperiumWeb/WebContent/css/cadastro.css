@@ -17,9 +17,9 @@
 
 .cabecalho {
 	position: relative;
-	border: 1px solid #009690;
+	border: 1px solid #ff9801;
 	color: #fff !important;
-	background-color: #009688 !important;
+	background-color: #ff9801 !important;
 	text-align: center;
 	max-width: 300px;
 }

@@ -18,9 +18,6 @@ public class UsuarioDao {
 	public UsuarioDao() {
 		this.conexao = new ConnectionFactory().getConnection();
 	}
-	
-	
-
 
 	public void adiciona(Usuario usuario) {
 		System.out.println("Inserindo usuario...");
@@ -41,33 +38,33 @@ public class UsuarioDao {
 		}
 
 	}
-	
+
 	public List<Usuario> getLista() {
-        String sql = "SELECT * FROM usuario";
-        try {
+		String sql = "SELECT * FROM usuario";
+		try {
 
-            List<Usuario> usuarios = new ArrayList<Usuario>();
-            PreparedStatement stmt = conexao.prepareStatement(sql);
-            ResultSet rs = stmt.executeQuery();
+			List<Usuario> usuarios = new ArrayList<Usuario>();
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery();
 
-            while (rs.next()) {
-                Usuario usuario = new Usuario();
-                usuario.setId(rs.getInt("id"));
-                usuario.setNome(rs.getString("nome"));
-                usuario.setEmail(rs.getString("email"));
-                usuario.setLogin(rs.getString("login"));
-                usuario.setAtivo(rs.getBoolean("ativo"));
-                usuario.setSenha(rs.getString("senha"));
+			while (rs.next()) {
+				Usuario usuario = new Usuario();
+				usuario.setId(rs.getInt("id"));
+				usuario.setNome(rs.getString("nome"));
+				usuario.setEmail(rs.getString("email"));
+				usuario.setLogin(rs.getString("login"));
+				usuario.setAtivo(rs.getBoolean("ativo"));
+				usuario.setSenha(rs.getString("senha"));
 
-                usuarios.add(usuario);
-            }
-            rs.close();
-            stmt.close();
-            return usuarios;
+				usuarios.add(usuario);
+			}
+			rs.close();
+			stmt.close();
+			return usuarios;
 
-        } catch (SQLException ex) {
-            throw new RuntimeException(ex);
-        }
-    }
+		} catch (SQLException ex) {
+			throw new RuntimeException(ex);
+		}
+	}
 
 }

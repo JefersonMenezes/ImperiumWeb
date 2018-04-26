@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <span class="notranslate" onmouseover="_tipon(this)"
 	onmouseout="_tipoff()"> <span class="google-src-text"
 	style="direction: ltr; text-align: left"> <!DOCTYPE html>
